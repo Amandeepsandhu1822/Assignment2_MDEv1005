@@ -1,0 +1,15 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.container-fluid {
+  
+  color:dodgerblue;
+}
+@media screen and (max-width: 768px){
+      
+  body{
+      background-color: pink;
+  }
+}
