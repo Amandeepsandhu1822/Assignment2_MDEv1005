@@ -22,7 +22,7 @@ interface ArrticlesData {
 
 const NewsList = () => {
     const [articles, setArticles] = useState<ArrticlesData[]>([])
-    const [articleCount, setArticleCount] = useState(0)
+    
 
 
     const getArticles = async () => {
@@ -48,13 +48,13 @@ const NewsList = () => {
                 <button className='btn btn-lg- btn-primary' onClick={() => getArticles()}>Get Latest News</button>
             </div>
            
-            {articles.map(article => {
+            {articles.map( (article, index) => {
                 let art = article as ArrticlesData
-                setArticleCount(articleCount+1)
+               
 
                 return (
                     <NewsItem
-                        key={articleCount+1}
+                        key={"newItem"+ index+1}
                         title={art.title}
                         description={art.description}
                         url={art.url}
